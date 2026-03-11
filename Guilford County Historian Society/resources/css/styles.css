@@ -1,0 +1,141 @@
+/* Import Google Fonts: Lora (Serif) and Montserrat (Sans-Serif) */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-parchment: #F9F7F2;
+  --text-ink: #2C3E50;
+  --accent-brass: #A67C52;
+  --header-midnight: #1B2631;
+  --white: #ffffff;
+  
+  /* Fonts */
+  --font-header: 'Lora', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-parchment);
+  color: var(--text-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-header);
+  color: var(--header-midnight);
+  font-weight: 700;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid var(--accent-brass); /* The "Pillar" */
+  padding-left: 15px;
+  margin: 20px;
+}
+
+.logo-top {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  font-weight: 300;
+  color: var(--accent-brass);
+}
+
+.logo-main {
+  font-size: 1.8rem;
+  line-height: 1;
+  text-transform: none;
+}
+
+/* Section Spacing */
+.content-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto; 
+}
+
+/* The Grid Container */
+.leadership-grid {
+    display: grid;
+    /* This creates 3 equal columns on desktop, but 'auto-fit' makes it respsonsive! */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Individual Card Styling */
+.member-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e0ddd5;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.member-card:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    border-color: var(--accent-brass);
+}
+
+/* Placeholder for Member Photos */
+.member-image {
+    width: 120px;
+    height: 120px;
+    background-color: #ddd;
+    border-radius: 50%; /* Circular portraits */
+    margin: 0 auto 15px;
+    border: 2px solid var(--accent-brass);
+}
+
+.role {
+    font-size: 0.9rem;
+    color: var(--accent-brass);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: var(--header-midnight);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--bg-parchment);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: var(--accent-brass); 
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #eeebe3; /* Slightly darker parchment */
+    font-size: 0.8rem;
+}
